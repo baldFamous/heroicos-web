@@ -15,7 +15,7 @@ export const metadata = {
   metadataBase: new URL('https://www.heroicosfitness.cl'),
 
   title: {
-    default: 'Entrenador Personal en La Serena | Heroicos Fitness',
+    default: 'Heroicos Fitness',
     template: '%s | Heroicos Fitness La Serena',
   },
 
