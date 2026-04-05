@@ -51,56 +51,68 @@ export default function App() {
   const plans = [
     {
       id: 'inicial',
-      title: 'HEROICOS INICIAL',
-      subtitle: 'PLAN CAMBIO FÍSICO',
+      title: '"Heroicos Inicial"',
+      desc: 'Conoce tu cuerpo y los beneficios de entrenar de forma guiada.',
       price: '$120.000',
-      color: 'bg-white text-black',
-      accent: 'border-zinc-200',
+      cardBg: 'bg-white',
+      titleColor: 'text-black',
+      lineColor: 'bg-black',
+      descColor: 'text-black',
+      priceBg: 'bg-white',
+      priceColor: 'text-black',
       features: [
-        'Evaluación inicial-final',
-        'Entrenamiento funcional',
-        'Entrenamiento full body',
-        'Polera Heroicos',
-        'Mensualidad GYM incluida'
+        '15 días Personalizados',
+        'evaluación inicio-final',
+        'planificación mensual',
+        'polera heroicos',
+        'gimnasio a elección'
       ]
     },
     {
       id: 'fitness',
-      title: 'HEROICOS FITNESS',
-      subtitle: 'PLAN MUSCULACIÓN',
+      title: '"Heroicos Fitness"',
+      desc: 'Desarrolla musculatura y fuerza entrenando como un Héroe, logrando masa magra con bajo % graso.',
       price: '$150.000',
-      color: 'bg-[#D9E021] text-black',
-      accent: 'border-[#D9E021]',
+      cardBg: 'bg-[#fcf30d]',
+      titleColor: 'text-black',
+      lineColor: 'bg-black',
+      descColor: 'text-black',
+      priceBg: 'bg-[#fcf30d]',
+      priceColor: 'text-black',
       popular: true,
       features: [
-        'Evaluación inicial-final',
-        'Entrenamiento de fuerza',
-        'Aumento de masa muscular',
-        'Reducción % graso',
-        'Polera Heroicos',
-        'Mensualidad GYM incluida'
+        '20 días Personalizados',
+        'evaluación Inbody',
+        'evaluación inicio-final',
+        'planificación mensual',
+        'polera heroicos',
+        'gimnasio a elección'
       ]
     },
     {
       id: 'elite',
-      title: 'HEROICOS ELITE',
-      subtitle: 'PLAN DEPORTIVO',
+      title: '"Heroicos Elite"',
+      desc: 'Explota tu máximo potencial y convierte en un héroe nivel elite preparado para todo.',
       price: '$220.000',
-      color: 'bg-zinc-900 text-white',
-      accent: 'border-zinc-700',
+      cardBg: 'bg-[#1e1e1e]',
+      titleColor: 'text-[#fcf30d]',
+      lineColor: 'bg-[#fcf30d]',
+      descColor: 'text-[#fcf30d]',
+      priceBg: 'bg-[#1e1e1e]',
+      priceColor: 'text-[#fcf30d]',
       features: [
-        'Batería de test inicial-final',
-        'Entrenamiento fuerza-potencia',
-        'Entrenamiento resistencia',
-        'Planificación deportiva avanzada',
-        'Polera Heroicos',
-        'Mensualidad GYM incluida'
+        '40 días Personalizados',
+        'evaluación Inbody',
+        'evaluación inicio-final',
+        'planificación Deportiva bimensual',
+        'polera heroicos',
+        'gimnasio a elección'
       ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-[#D9E021] selection:text-black">
+    <div className="min-h-screen bg-black text-white selection:bg-[#fcf30d] selection:text-black">
 
       {/* =========================
           NAVBAR
@@ -111,19 +123,19 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-[#D9E021] flex items-center justify-center rounded-sm rotate-3">
+            <div className="w-10 h-10 bg-[#fcf30d] flex items-center justify-center rounded-sm rotate-3">
               <Dumbbell className="text-black" size={24} />
             </div>
             <span className="font-black text-2xl tracking-tighter uppercase italic">
-              HEROICOS <span className="text-[#D9E021]">FITNESS</span>
+              HEROICOS <span className="text-[#fcf30d]">FITNESS</span>
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 font-bold uppercase text-xs tracking-widest">
-            <a href="#inicio" className="hover:text-[#D9E021]">Inicio</a>
-            <a href="#metodo" className="hover:text-[#D9E021]">Método</a>
-            <a href="#planes" className="hover:text-[#D9E021]">Planes</a>
-            <a href="#contacto" className="bg-[#D9E021] text-black px-6 py-2 rounded-full">
+            <a href="#inicio" className="hover:text-[#fcf30d]">Inicio</a>
+            {/*<a href="#metodo" className="hover:text-[#fcf30d]">Método</a>*/}
+            <a href="#planes" className="hover:text-[#fcf30d]">Planes</a>
+            <a href="https://www.instagram.com/m/heroicos_fit_chile" target="_blank" rel="noopener noreferrer" className="bg-[#fcf30d] text-black px-6 py-2 rounded-full">
               Inscribirme
             </a>
           </div>
@@ -140,7 +152,7 @@ export default function App() {
           <a href="#inicio" onClick={() => setIsMenuOpen(false)}>Inicio</a>
           <a href="#metodo" onClick={() => setIsMenuOpen(false)}>Método</a>
           <a href="#planes" onClick={() => setIsMenuOpen(false)}>Planes</a>
-          <a href="#contacto" onClick={() => setIsMenuOpen(false)} className="text-[#D9E021]">
+          <a href="https://www.instagram.com/m/heroicos_fit_chile" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)} className="text-[#fcf30d]">
             Inscribirme
           </a>
         </div>
@@ -161,7 +173,7 @@ export default function App() {
         </div>
 
         <div className="relative z-20 text-center px-6 max-w-5xl">
-          <p className="text-[#D9E021] font-black tracking-[0.4em] uppercase mb-4 text-sm">
+          <p className="text-[#fcf30d] font-black tracking-[0.4em] uppercase mb-4 text-sm">
             Academia Fitness Personalizada
           </p>
 
@@ -172,7 +184,7 @@ export default function App() {
             </span>
           </h1>
 
-          <a href="#planes" className="bg-[#D9E021] text-black px-10 py-5 rounded-sm font-black text-lg inline-flex items-center gap-2 hover:bg-white transition-all group">
+          <a href="#planes" className="bg-[#fcf30d] text-black px-10 py-5 rounded-sm font-black text-lg inline-flex items-center gap-2 hover:bg-white transition-all group">
             VER PLANES
             <ChevronRight className="group-hover:translate-x-1 transition-transform" />
           </a>
@@ -181,19 +193,19 @@ export default function App() {
 
       {/* =========================
           MÉTODO HEROICO
-      ==========================*/}
+      ==========================
       <section id="metodo" className="py-24 bg-zinc-900 px-6">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
 
           <div>
             <h2 className="text-4xl font-black italic mb-10 uppercase">
-              EL MÉTODO <span className="text-[#D9E021]">HEROICO</span>
+              EL MÉTODO <span className="text-[#fcf30d]">HEROICO</span>
             </h2>
 
             <div className="space-y-8">
               {methodology.map((m, i) => (
                 <div key={i} className="flex gap-4">
-                  <div className="p-3 bg-black rounded-lg text-[#D9E021]">
+                  <div className="p-3 bg-black rounded-lg text-[#fcf30d]">
                     {m.icon}
                   </div>
                   <div>
@@ -211,7 +223,7 @@ export default function App() {
 
         </div>
       </section>
-
+*/}
       {/* =========================
           PLANES
       ==========================*/}
@@ -220,9 +232,9 @@ export default function App() {
 
           <div className="text-center mb-20">
             <h2 className="text-5xl md:text-7xl font-black italic uppercase">
-              NUESTROS <span className="text-[#D9E021]">PLANES</span>
+              NUESTROS <span className="text-[#fcf30d]">PLANES</span>
             </h2>
-            <div className="w-24 h-2 bg-[#D9E021] mx-auto mt-6"></div>
+            <div className="w-24 h-2 bg-[#fcf30d] mx-auto mt-6"></div>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
@@ -231,38 +243,39 @@ export default function App() {
                 key={plan.id}
                 onMouseEnter={() => setActivePlan(plan.id)}
                 onMouseLeave={() => setActivePlan(null)}
-                className={`relative flex flex-col rounded-3xl transition-all duration-500 overflow-hidden border-2 ${plan.accent}
+                className={`flex flex-col gap-4 transition-all duration-500
                   ${activePlan === plan.id ? 'scale-105 z-10' : 'scale-100'}
-                  ${plan.color}`}
+                `}
               >
-                <div className="p-10 text-center">
-                  <h3 className="text-3xl font-black italic">{plan.title}</h3>
-                  <p className="text-[10px] font-black tracking-[0.3em] opacity-70 uppercase underline underline-offset-4 mt-2">
-                    {plan.subtitle}
-                  </p>
+                <div className={`relative flex flex-col rounded-[2.5rem] p-8 h-full ${plan.cardBg}`}>
+                  <div className="mb-6">
+                    <h3 className={`text-4xl leading-none font-black italic tracking-tighter ${plan.titleColor}`}>
+                      {plan.title}
+                    </h3>
+                    <div className={`w-3/4 h-[3px] mt-2 mb-4 ${plan.lineColor}`}></div>
+                    <p className={`font-bold leading-tight text-lg ${plan.descColor}`}>
+                      {plan.desc}
+                    </p>
+                  </div>
+
+                  <div className="flex-grow">
+                    <p className={`font-bold text-lg mb-2 ${plan.descColor}`}>Incluye:</p>
+                    <ul className={`space-y-1 ${plan.descColor}`}>
+                      {plan.features.map((f, i) => (
+                        <li key={i} className="flex items-start gap-2 font-bold text-lg leading-snug">
+                          <span className="mt-0.5 text-xl">•</span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
-                <div className="px-10 flex-grow">
-                  <ul className="space-y-4 mb-10">
-                    {plan.features.map((f, i) => (
-                      <li key={i} className="flex items-center gap-3 text-sm font-bold uppercase">
-                        <CheckCircle2 size={18} />
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="p-10 mt-auto text-center">
-                  <span className="text-4xl font-black">{plan.price}</span>
-                  <p className="text-[10px] uppercase font-bold opacity-60 mb-6">
-                    Suscripción mensual
-                  </p>
-
-                  <button className="w-full py-4 bg-black text-white font-black uppercase text-sm hover:bg-zinc-800 transition-all">
-                    Inscribirme ahora
-                  </button>
-                </div>
+                <a href="https://www.instagram.com/m/heroicos_fit_chile" target="_blank" rel="noopener noreferrer" className={`block rounded-full py-4 shadow-lg text-center transition-opacity hover:opacity-90 ${plan.priceBg}`}>
+                  <span className={`text-5xl font-black tracking-tighter ${plan.priceColor}`}>
+                    {plan.price}
+                  </span>
+                </a>
               </div>
             ))}
           </div>
@@ -277,17 +290,17 @@ export default function App() {
         <div className="max-w-7xl mx-auto text-center">
 
           <div className="flex justify-center items-center gap-2 mb-8">
-            <div className="w-8 h-8 bg-[#D9E021] flex items-center justify-center rounded-sm">
+            <div className="w-8 h-8 bg-[#fcf30d] flex items-center justify-center rounded-sm">
               <Dumbbell className="text-black" size={18} />
             </div>
             <span className="font-black text-2xl uppercase italic">
-              HEROICOS <span className="text-[#D9E021]">FITNESS</span>
+              HEROICOS <span className="text-[#fcf30d]">FITNESS</span>
             </span>
           </div>
 
           <p className="text-zinc-500 mb-8 max-w-md mx-auto">
             Más información en Instagram:
-            <span className="text-[#D9E021] font-bold"> @HEROICOS_FIT_CHILE</span>
+            <span className="text-[#fcf30d] font-bold"> @HEROICOS_FIT_CHILE</span>
           </p>
 
           <div className="flex justify-center mb-10">
@@ -295,7 +308,7 @@ export default function App() {
               href="https://www.instagram.com/heroicos_fit_chile/"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 bg-zinc-900 rounded-full hover:bg-[#D9E021] hover:text-black transition-all"
+              className="p-3 bg-zinc-900 rounded-full hover:bg-[#fcf30d] hover:text-black transition-all"
             >
               <Instagram size={24} />
             </a>
